@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Aizah 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(-45deg,#2b0a3d,#4b0082,#6d28d9,#9d4edd);
+background-size:400% 400%;
+animation:bg 14s ease infinite;
+
+min-height:100vh;
+overflow-x:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+
+color:white;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+#stars{
+
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:0;
+
+}
+
+.star{
+
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:.8;
+animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(1.3);
+
+}
+
+}
+
+.heart{
+
+position:fixed;
+bottom:-40px;
+
+opacity:.25;
+
+pointer-events:none;
+
+animation:float linear forwards;
+
+z-index:0;
+
+}
+
+@keyframes float{
+
+from{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+to{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+#welcome{
+
+position:fixed;
+inset:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:rgba(18,0,35,.95);
+
+z-index:20;
+
+transition:1s;
+
+}
+
+#welcome h1{
+
+font-size:clamp(2rem,6vw,4rem);
+
+margin-bottom:15px;
+
+}
+
+#welcome p{
+
+font-size:1.2rem;
+
+margin-bottom:35px;
+
+min-height:35px;
+
+}
+
+#welcome button{
+
+padding:16px 42px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#6d28d9;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#welcome button:hover{
+
+transform:scale(1.08);
+
+}
+
+.hide{
+
+opacity:0;
+visibility:hidden;
+
+}
+
+.container{
+
+width:100%;
+padding:40px 20px;
+
+display:flex;
+justify-content:center;
+
+opacity:0;
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+}
+
+.card{
+
+width:100%;
+max-width:760px;
+
+padding:45px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.3);
+
+position:relative;
+
+z-index:2;
+
+}
+
+.card h1{
+
+text-align:center;
+
+font-size:clamp(2rem,6vw,3.2rem);
+
+margin-bottom:30px;
+
+}
+
+#text{
+
+white-space:pre-wrap;
+
+line-height:2;
+
+font-size:1.08rem;
+
+min-height:420px;
+
+}
+
+.action{
+
+display:none;
+
+margin:40px auto 0;
+
+padding:16px 36px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#6d28d9;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.action:hover{
+
+transform:scale(1.05);
+
+}
+
+#date{
+
+display:none;
+
+margin-top:45px;
+
+text-align:center;
+
+animation:fade 1s;
+
+}
+
+.dateButtons{
+
+margin-top:25px;
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.dateButtons button{
+
+padding:15px 28px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-weight:600;
+
+background:white;
+
+color:#6d28d9;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.card{
+
+padding:28px;
+
+}
+
+#text{
+
+font-size:1rem;
+
+}
+
+.dateButtons{
+
+flex-direction:column;
+
+}
+
+.dateButtons button{
+
+width:100%;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div id="welcome">
+
+<h1>Hey Aizah 💜</h1>
+
+<p id="intro"></p>
+
+<button onclick="startPage()">
+
+Open
+
+</button>
+
+</div>
+
+<div class="container" id="main">
+
+<div class="card">
+
+<h1>Happy Girlfriend Day 💜</h1>
+
+<p id="text"></p>
+
+<button id="next" class="action" onclick="showDate()">
+
+One More Thing
+
+</button>
+
+<div id="date">
+
+<h2>Okay... one question 😭</h2>
+
+<p>
+
+We've been talking about going to Brand New Day for a while now.
+
+<br><br>
+
+It's still not planned yet...
+
+but I really wanna go with you.
+
+<br><br>
+
+So...
+
+<br><br>
+
+Will you go on a Brand New Day date with me? 🌸
+
+</p>
+
+<div class="dateButtons">
+
+<button onclick="yes()">
+
+YES 💜
+
+</button>
+
+<button onclick="yes()">
+
+YES OBVIOUSLY
+
+</button>
+
+</div>
+
+<div id="end" style="display:none;margin-top:40px;">
+
+<h2>YAYYYYY 😭💜</h2>
+
+<p>
+
+I knew you'd say yes.
+
+<br><br>
+
+Now I actually have to plan it 😭
+
+<br><br>
+
+I'm really looking forward to spending that day with you.
+
+<br><br>
+
+Thanks for reading everything.
+
+<br><br>
+
+I hope this made you smile at least a little.
+
+<br><br>
+
+Happy Girlfriend Day 💜
+
+<br><br>
+
+I love you.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const introText="I made something for you...";
+let introIndex=0;
+
+function typeIntro(){
+
+if(introIndex<introText.length){
+
+document.getElementById("intro").innerHTML+=introText.charAt(introIndex);
+
+introIndex++;
+
+setTimeout(typeIntro,70);
+
+}
+
+}
+
+typeIntro();
+
+const letter=`Hey Aizah,
+
+Happy Girlfriend Day 💜
+
+I know this isn't some massive gift or anything.
+
+I just wanted to make something instead of sending another text because I thought it'd be a little more special.
+
+And honestly...
+
+I had no idea what I was doing while making this 😭
+
+But if you're reading it, that means it worked.
+
+Thank you for always putting up with me.
+
+For listening to my random thoughts.
+
+For laughing at my dumb jokes.
+
+For making even the most normal days feel better.
+
+You're genuinely my favourite person to talk to.
+
+No matter what kind of day I'm having, somehow talking to you always makes it better.
+
+You make me smile without even trying.
+
+I don't think I tell you this enough...
+
+but I'm actually really lucky to have you.
+
+Thank you for being patient with me.
+
+Thank you for caring about me.
+
+Thank you for just... being you.
+
+I know I joke around a lot,
+
+but everything I'm saying here is genuine.
+
+I really appreciate you.
+
+And I'm glad I get to call you my girlfriend.
+
+`;
+
+let index=0;
+
+function startPage(){
+
+document.getElementById("welcome").classList.add("hide");
+
+document.getElementById("main").classList.add("show");
+
+typeLetter();
+
+}
+
+function typeLetter(){
+
+if(index<letter.length){
+
+document.getElementById("text").innerHTML+=letter.charAt(index);
+
+index++;
+
+setTimeout(typeLetter,27);
+
+}else{
+
+document.getElementById("next").style.display="block";
+
+}
+
+}
+
+function showDate(){
+
+document.getElementById("date").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+function yes(){
+
+document.getElementById("end").style.display="block";
+
+createConfetti();
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💜";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+heart.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),11000);
+
+}
+
+setInterval(createHeart,350);
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.width=(1+Math.random()*3)+"px";
+
+star.style.height=star.style.width;
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+stars.appendChild(star);
+
+}
+
+function createConfetti(){
+
+for(let i=0;i<80;i++){
+
+const c=document.createElement("div");
+
+c.innerHTML="💜";
+
+c.style.position="fixed";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.top="-20px";
+
+c.style.fontSize=(15+Math.random()*15)+"px";
+
+c.style.transition="4s linear";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+
+c.style.transform="translateY(110vh) rotate(720deg)";
+
+},50);
+
+setTimeout(()=>{
+
+c.remove();
+
+},4500);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
